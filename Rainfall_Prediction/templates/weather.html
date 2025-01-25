@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Information</title>
+    <!--Google Font link-->
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+
+
+        <link rel="stylesheet" href="static/assets/css/swiper.min.css">
+        <link rel="stylesheet" href="static/assets/css/animate.css">
+        <link rel="stylesheet" href="static/assets/css/iconfont.css">
+        <link rel="stylesheet" href="static/assets/css/font-awesome.min.css">
+        <link rel="stylesheet" href="static/assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="static/assets/css/magnific-popup.css">
+        <link rel="stylesheet" href="static/assets/css/bootsnav.css">
+
+
+
+        <link rel="stylesheet" href="static/assets/css/style.css">
+
+ 
+        <link rel="stylesheet" href="static/assets/css/responsive.css" />
+
+        <script src="static/assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-image: url('static/homebg.png');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            color: black;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        #icon-container {
+            text-align: center;
+        }
+
+        #icon {
+            width: 150px; /* Larger icon */
+            height: 150px;
+            margin-bottom: 10px;
+        }
+
+        #icon img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .box1 {
+            font-size: 20px;
+            color: black; /* Dark font color */
+            margin: 5px 0;
+        }
+
+        .details {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #808080; /* Grey background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            width: 200px; /* Adjust the width as needed */
+            margin: 10px;
+        }
+
+        .humidity {
+            background-color: #FFD700; /* Yellow background for humidity */
+        }
+
+        .visibility {
+            background-color: #87CEEB; /* Light blue background for visibility */
+        }
+
+        .windspeed {
+            background-color: #98FB98; /* Light green background for wind speed */
+        }
+
+        
+    </style>
+</head>
+<body>
+    <header style="color: white; font-weight: bold;">
+        <h1>Weather Information & rainfall prediction in {{ Location }}  </h1>
+    </header>
+    <div class="main">
+        <div id="icon-container">
+            <div id="icon">
+                <img src="http://openweathermap.org/img/w/{{ weather_icon }}.png" alt="Weather Icon">
+            </div>
+            <div class="box1" style="color: white; font-weight: bold;">
+                {{ temperature }}°C
+            </div>
+        </div>
+        <div class="box1" style="color: white; font-weight: bold;">
+            <h3>{{ weather_main }} - {{ weather_description }}</h3> 
+            <h3> Prediction : {{ predictions }} </h3>
+        </div>
+        <div class="details">
+            <div class="box humidity">
+                <div class="box1">Humidity</div>
+                <div class="box1">{{ humidity }}%</div>
+            </div>
+            <div class="box visibility">
+                <div class="box1">Visibility</div>
+                <div class="box1">{{ visibility }} km</div>
+            </div>
+            <div class="box windspeed">
+                <div class="box1">Wind Speed</div>
+                <div class="box1">{{ wind_speed }} m/s</div>
+            </div>
+            
+            <div class="box humidity">
+                <div class="box1">Feels Like</div>
+                <div class="box1">{{ feels_like }}°C</div>
+            </div>
+            <div class="box visibility">
+                <div class="box1">Max Temperature</div>
+                <div class="box1">{{ max_temp }}°C</div>
+            </div>
+            <div class="box windspeed">
+                <div class="box1">Min Temperature</div>
+                <div class="box1">{{ min_temp }}°C</div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer" class="footer bg-black">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <nav class="navbar navbar-default bootsnav footer-menu no-background">
+                        <div class="container">  
+
+                            <!-- Start Atribute Navigation -->
+                            <div class="attr-nav">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                </ul>
+                            </div>        
+                            <!-- End Atribute Navigation -->
+
+
+                            <!-- Start Header Navigation -->
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-footer">
+                                    <i class="fa fa-bars"></i>
+                                </button>
+                                <a class="navbar-brand" href="#brand"><img src="assets/images/footer-logo.png" class="logo" alt=""></a>
+                            </div>
+                            <!-- End Header Navigation -->
+
+                            <!-- navbar menu -->
+                            <div class="collapse navbar-collapse" id="navbar-footer">
+                                <ul class="nav navbar-nav navbar-center">
+                                    <li><a href="#home">Home</a></li>                    
+                                    <li><a href="#features">Features</a></li>
+                                </ul>
+                            </div><!-- /.navbar-collapse -->
+                        </div>   
+                    </nav>
+                </div>
+                <div class="divider"></div>
+                
+
+                <div class="col-md-12">
+                    <div class="main_footer text-center p-top-20 p-bottom-30">
+                        <p class="wow fadeInRight" data-wow-duration="1s"> 
+                            <a target="_blank" href="#">Rainfall Predictor</a> 
+                            2024. All Rights Reserved
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
+
+
+</div>
+
+<!-- JS includes -->
+
+<script src="static/assets/js/vendor/jquery-1.11.2.min.js"></script>
+<script src="static/assets/js/vendor/bootstrap.min.js"></script>
+
+<script src="static/assets/js/jquery.magnific-popup.js"></script>
+<script src="static/assets/js/jquery.easing.1.3.js"></script>
+<script src="static/assets/js/bootsnav.js"></script>
+
+
+
+<script src="static/assets/js/plugins.js"></script>
+<script src="static/assets/js/main.js"></script>
+
+</body>
+</html>

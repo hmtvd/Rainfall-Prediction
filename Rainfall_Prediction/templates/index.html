@@ -1,0 +1,254 @@
+<!doctype html>
+
+ <html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Rainfall Predictor</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/png" href="favicon.ico">
+
+        <!--Google Font link-->
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+
+
+        <link rel="stylesheet" href="static/assets/css/swiper.min.css">
+        <link rel="stylesheet" href="static/assets/css/animate.css">
+        <link rel="stylesheet" href="static/assets/css/iconfont.css">
+        <link rel="stylesheet" href="static/assets/css/font-awesome.min.css">
+        <link rel="stylesheet" href="static/assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="static/assets/css/magnific-popup.css">
+        <link rel="stylesheet" href="static/assets/css/bootsnav.css">
+
+
+
+        <link rel="stylesheet" href="static/assets/css/style.css">
+
+ 
+        <link rel="stylesheet" href="static/assets/css/responsive.css" />
+
+        <script src="static/assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
+
+    <body data-spy="scroll" data-target=".navbar-collapse">
+
+
+        <!-- Preloader -->
+        <div id="loading">
+            <div id="loading-center">
+                <div id="loading-center-absolute">
+                    <div class="object" id="object_one"></div>
+                    <div class="object" id="object_two"></div>
+                    <div class="object" id="object_three"></div>
+                    <div class="object" id="object_four"></div>
+                </div>
+            </div>
+        </div><!--End off Preloader -->
+
+
+        <div class="culmn">
+            <!--Home page style-->
+
+
+            <nav class="navbar navbar-default bootsnav navbar-fixed white no-background">
+                <div class="container">  
+
+                    <!-- Start Atribute Navigation -->
+                    <div class="attr-nav">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        </ul>
+                    </div>        
+                    <!-- End Atribute Navigation -->
+
+
+                    <!-- Start Header Navigation -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <a class="navbar-brand" href="#brand">
+                            <img src="static/assets/images/logo.png" class="logo logo-display" alt="">
+                            <img src="static/assets/images/footer-logo.png" class="logo logo-scrolled" alt="">
+                        </a>
+
+                    </div>
+                    <!-- End Header Navigation -->
+
+                    <!-- navbar menu -->
+                    <div class="collapse navbar-collapse" id="navbar-menu">
+                        <ul class="nav navbar-nav navbar-center">
+                            <li><a href="#home">Home</a></li>                    
+                            <li><a href="#features">Features</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div>   
+            </nav>
+
+            <!--Home Sections-->
+
+            <section id="home" class="home">
+                <div class="container">
+                    <div class="row">
+                        <div class="main_home">
+                            <div class="col-md-6">
+                                <div class="home_text">
+                                    <h1 class="text-white">know the possibility of rain in your city</h1>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="phone_one phone_attr1 text-center sm-m-top-50">
+                                    <form id="weather-form" action="/weather" method="post">
+                                        <div class="mb-3" style="font-weight: bold; font-size: 25px;">
+                                            <label for="city" class="form-label" style="color: white; font-weight: bold;"  >Select a City:</label>
+                                            <select id="city" name="city" class="form-select form-select-lg mb-3" required>
+                                                
+                                                        <option value="">Select a city...</option>
+                                                        <option value="MountGambier">Mount Gambier</option>
+                                                        <option value="Sydney">Sydney</option>
+                                                        <option value="Melbourne">Melbourne</option>
+                                                        <option value="Richmond">Richmond</option>
+                                                        <option value="Albury">Albury</option>
+                                                        <option value="PerthAirport">Perth Airport</option>
+                                                        <option value="Wollongong">Wollongong</option>
+                                                        <option value="GoldCoast">Gold Coast</option>
+                                                        <option value="Darwin">Darwin</option>
+                                                        <option value="Witchcliffe">Witchcliffe</option>
+                                                        <option value="Brisbane">Brisbane</option>
+                                                        <option value="Cobar">Cobar</option>
+                                                        <option value="Launceston">Launceston</option>
+                                                        <option value="Albany">Albany</option>
+                                                        <option value="Portland">Portland</option>
+                                                        <option value="Penrith">Penrith</option>
+                                                        <option value="Nhil">Nhil</option>
+                                                        <option value="CoffsHarbour">Coffs Harbour</option>
+                                                        <option value="NorfolkIsland">Norfolk Island</option>
+                                                        <option value="SalmonGums">Salmon Gums</option>
+                                                        <option value="MelbourneAirport">Melbourne Airport</option>
+                                                        <option value="Perth">Perth</option>
+                                                        <option value="Canberra">Canberra</option>
+                                                        <option value="Ballarat">Ballarat</option>
+                                                        <option value="Moree">Moree</option>
+                                                        <option value="PearceRAAF">Pearce RAAF</option>
+                                                        <option value="Uluru">Uluru</option>
+                                                        <option value="Watsonia">Watsonia</option>
+                                                        <option value="BadgerysCreek">Badgerys Creek</option>
+                                                        <option value="Walpole">Walpole</option>
+                                                        <option value="SydneyAirport">Sydney Airport</option>
+                                                        <option value="Townsville">Townsville</option>
+                                                        <option value="Woomera">Woomera</option>
+                                                        <option value="Cairns">Cairns</option>
+                                                        <option value="MountGinini">Mount Ginini</option>
+                                                        <option value="Mildura">Mildura</option>
+                                                        <option value="Dartmoor">Dartmoor</option>
+                                                        <option value="Sale">Sale</option>
+                                                        <option value="Adelaide">Adelaide</option>
+                                                        <option value="Williamtown">Williamtown</option>
+                                                        <option value="Tuggeranong">Tuggeranong</option>
+                                                        <option value="AliceSprings">Alice Springs</option>
+                                                        <option value="WaggaWagga">Wagga Wagga</option>
+                                                        <option value="Bendigo">Bendigo</option>
+                                                        <option value="NorahHead">Norah Head</option>
+                                                        <option value="Nuriootpa">Nuriootpa</option>
+                                                        <option value="Hobart">Hobart</option>
+                                                        <option value="Katherine">Katherine</option>
+                                                        <option value="Newcastle">Newcastle</option>
+                                              
+                                            </select>
+                                        </div>
+                                        <div class="form-button" >
+                                            <button type="submit" class="btn btn-custom w-100" style="font-weight: bold; font-size: 19px;" >Get Weather</button>
+                                        </div>
+                                    </form>
+
+                                    
+                                            
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+                        
+
+                    </div><!--End off row-->
+                </div><!--End off container -->
+            </section> <!--End off Home Sections-->
+
+            
+            <footer id="footer" class="footer bg-black">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <nav class="navbar navbar-default bootsnav footer-menu no-background">
+                                <div class="container">  
+
+                                    <!-- Start Atribute Navigation -->
+                                    <div class="attr-nav">
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                        </ul>
+                                    </div>        
+                                    <!-- End Atribute Navigation -->
+
+
+                                    <!-- Start Header Navigation -->
+                                    <div class="navbar-header">
+                                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-footer">
+                                            <i class="fa fa-bars"></i>
+                                        </button>
+                                        <a class="navbar-brand" href="#brand"><img src="assets/images/footer-logo.png" class="logo" alt=""></a>
+                                    </div>
+                                    <!-- End Header Navigation -->
+
+                                    <!-- navbar menu -->
+                                    <div class="collapse navbar-collapse" id="navbar-footer">
+                                        <ul class="nav navbar-nav navbar-center">
+                                            <li><a href="#home">Home</a></li>                    
+                                            <li><a href="#features">Features</a></li>
+                                        </ul>
+                                    </div><!-- /.navbar-collapse -->
+                                </div>   
+                            </nav>
+                        </div>
+                        <div class="divider"></div>
+                        
+
+                        <div class="col-md-12">
+                            <div class="main_footer text-center p-top-20 p-bottom-30">
+                                <p class="wow fadeInRight" data-wow-duration="1s"> 
+                                    <a target="_blank" href="#">Rainfall Predictor</a> 
+                                    2024. All Rights Reserved
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </footer>
+
+
+
+
+        </div>
+
+        <!-- JS includes -->
+
+        <script src="static/assets/js/vendor/jquery-1.11.2.min.js"></script>
+        <script src="static/assets/js/vendor/bootstrap.min.js"></script>
+
+        <script src="static/assets/js/jquery.magnific-popup.js"></script>
+        <script src="static/assets/js/jquery.easing.1.3.js"></script>
+        <script src="static/assets/js/bootsnav.js"></script>
+
+
+
+        <script src="static/assets/js/plugins.js"></script>
+        <script src="static/assets/js/main.js"></script>
+
+    </body>
+</html>
